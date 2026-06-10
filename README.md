@@ -305,27 +305,6 @@ Summarizes the project into actionable business recommendations for decision-mak
 
 ---
 
-# ▶️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/global-digital-advertising-performance-analysis.git
-```
-
-Navigate into the project:
-
-```bash
-cd global-digital-advertising-performance-analysis
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 # 📈 Skills Demonstrated
 
