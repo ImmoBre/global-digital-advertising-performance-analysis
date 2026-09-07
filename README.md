@@ -330,10 +330,22 @@ Summarizes the project into actionable business recommendations for decision-mak
 
 ---
 
-# 👨‍💻 Author
 
-**Saad Maher**
+## Author
 
-Aspiring Data Analyst passionate about transforming data into actionable business insights through Python, SQL, and Power BI.
+### Saad Maher
 
-If you found this project useful, consider ⭐ starring the repository.
+Data Analyst focused on transforming raw data into clear insights using **Python, SQL, Excel, and Power BI**.
+
+[![GitHub](https://img.shields.io/badge/GitHub-Immobre-181717?style=for-the-badge\&logo=github)](https://github.com/Immobre)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Saad_Maher-0A66C2?style=for-the-badge\&logo=linkedin)](https://www.linkedin.com/in/saad-m-83b846356/)
+
+*Feel free to explore my other projects and connect with me.*
+
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
