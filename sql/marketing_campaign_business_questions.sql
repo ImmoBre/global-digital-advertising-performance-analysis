@@ -14,7 +14,7 @@ to support marketing decision-making.
 
 CREATE DATABASE marketing_campaign;
 
-USE marketing_analysis;
+USE marketing_campaign;
 
 -- Business Question 1 
 -- Which platform generated the highest total revenue?
