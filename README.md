@@ -281,7 +281,7 @@ Summarizes the project into actionable business recommendations for decision-mak
 ## Executive Recommendations
 
 ![Executive Recommendations](images/executive_recommendations.png)
-```
+
 
 ---
 
