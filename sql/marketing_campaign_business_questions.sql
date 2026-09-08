@@ -67,7 +67,7 @@ GROUP BY country
 ORDER BY total_revenue DESC;
 
 -- Business Question 6 
--- What is the average ROAS by platform?
+-- What is the ROAS by platform?
 
 SELECT
     platform,
@@ -80,7 +80,7 @@ GROUP BY platform
 ORDER BY roas DESC;
 
 -- Business Question 7 
--- What is the average CPC by platform?
+-- What is the CPC by platform?
 
 SELECT
     platform,
@@ -93,7 +93,7 @@ GROUP BY platform
 ORDER BY cpc;
 
 -- Business Question 8 
--- What is the average CTR by platform?
+-- What is the CTR by platform?
 
 SELECT
     platform,
@@ -139,7 +139,7 @@ GROUP BY month
 ORDER BY month;
 
 -- Business Question 12 
--- Average ROAS by industry
+-- ROAS by industry
 
 SELECT
     industry,
@@ -152,7 +152,7 @@ GROUP BY industry
 ORDER BY roas DESC;
 
 -- Business Question 13 
--- Average CPA by platform
+-- CPA by platform
 
 SELECT
     platform,
@@ -185,7 +185,7 @@ GROUP BY platform
 ORDER BY total_conversions DESC;
 
 -- Business Question 16 
--- Top 5 countries by average ROAS
+-- Top 5 countries by ROAS
 
 SELECT
     country,
