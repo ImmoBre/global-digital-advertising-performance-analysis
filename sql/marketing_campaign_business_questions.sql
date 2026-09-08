@@ -71,30 +71,39 @@ ORDER BY total_revenue DESC;
 
 SELECT
     platform,
-    ROUND(AVG(ROAS),2) AS average_roas
+    ROUND(
+        SUM(revenue) / NULLIF(SUM(ad_spend), 0),
+        2
+    ) AS roas
 FROM global_ads_performance_dataset
 GROUP BY platform
-ORDER BY average_roas DESC;
+ORDER BY roas DESC;
 
 -- Business Question 7 
 -- What is the average CPC by platform?
 
 SELECT
     platform,
-    ROUND(AVG(CPC),2) AS average_cpc
+    ROUND(
+        SUM(ad_spend) / NULLIF(SUM(clicks), 0),
+        2
+    ) AS cpc
 FROM global_ads_performance_dataset
 GROUP BY platform
-ORDER BY average_cpc;
+ORDER BY cpc;
 
 -- Business Question 8 
 -- What is the average CTR by platform?
 
 SELECT
     platform,
-    ROUND(AVG(CTR),4) AS average_ctr
+    ROUND(
+        SUM(clicks) / NULLIF(SUM(impressions), 0),
+        4
+    ) AS ctr
 FROM global_ads_performance_dataset
 GROUP BY platform
-ORDER BY average_ctr DESC;
+ORDER BY ctr DESC;
 
 -- Business Question 9 
 -- Top 10 highest revenue campaigns
@@ -134,20 +143,26 @@ ORDER BY month;
 
 SELECT
     industry,
-    ROUND(AVG(ROAS),2) AS average_roas
+    ROUND(
+        SUM(revenue) / NULLIF(SUM(ad_spend), 0),
+        2
+    ) AS roas
 FROM global_ads_performance_dataset
 GROUP BY industry
-ORDER BY average_roas DESC;
+ORDER BY roas DESC;
 
 -- Business Question 13 
 -- Average CPA by platform
 
 SELECT
     platform,
-    ROUND(AVG(CPA),2) AS average_cpa
+    ROUND(
+        SUM(ad_spend) / NULLIF(SUM(conversions), 0),
+        2
+    ) AS cpa
 FROM global_ads_performance_dataset
 GROUP BY platform
-ORDER BY average_cpa;
+ORDER BY cpa;
 
 -- Business Question 14 
 -- Total clicks by platform
@@ -174,10 +189,13 @@ ORDER BY total_conversions DESC;
 
 SELECT
     country,
-    ROUND(AVG(ROAS),2) AS average_roas
+    ROUND(
+        SUM(revenue) / NULLIF(SUM(ad_spend), 0),
+        2
+    ) AS roas
 FROM global_ads_performance_dataset
 GROUP BY country
-ORDER BY average_roas DESC
+ORDER BY roas DESC
 LIMIT 5;
 
 -- Business Question 17
@@ -217,10 +235,50 @@ LIMIT 10;
 -- Overall business KPIs
 
 SELECT
-    SUM(revenue) AS total_revenue,
-    SUM(ad_spend) AS total_ad_spend,
-    SUM(revenue - ad_spend) AS total_profit,
-    ROUND(AVG(ROAS),2) AS average_roas,
+    ROUND(SUM(revenue), 2) AS total_revenue,
+    ROUND(SUM(ad_spend), 2) AS total_ad_spend,
+    ROUND(SUM(revenue) - SUM(ad_spend), 2) AS total_profit,
+
+    ROUND(
+        SUM(revenue) / NULLIF(SUM(ad_spend), 0),
+        2
+    ) AS roas,
+
+    ROUND(
+        SUM(clicks) / NULLIF(SUM(impressions), 0),
+        4
+    ) AS ctr,
+
+    ROUND(
+        SUM(ad_spend) / NULLIF(SUM(clicks), 0),
+        2
+    ) AS cpc,
+
+    ROUND(
+        SUM(ad_spend) / NULLIF(SUM(conversions), 0),
+        2
+    ) AS cpa,
+
+    ROUND(
+        SUM(conversions) / NULLIF(SUM(clicks), 0),
+        4
+    ) AS conversion_rate,
+
+    ROUND(
+        (
+            SUM(ad_spend) /
+            NULLIF(SUM(impressions), 0)
+        ) * 1000,
+        2
+    ) AS cpm,
+
+    ROUND(
+        (
+            SUM(revenue) - SUM(ad_spend)
+        ) / NULLIF(SUM(revenue), 0),
+        4
+    ) AS profit_margin,
+
     SUM(clicks) AS total_clicks,
     SUM(conversions) AS total_conversions
 FROM global_ads_performance_dataset;
