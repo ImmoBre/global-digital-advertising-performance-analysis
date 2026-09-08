@@ -1,6 +1,6 @@
 # 🚀 Global Digital Advertising Performance Analysis
 
-> **End-to-End Data Analytics Project using Python, SQL, and Power BI**
+> **Business-focused marketing analytics using Python, MySQL, and Power BI**
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-black?logo=pandas)
