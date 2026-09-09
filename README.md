@@ -12,9 +12,9 @@
 
 # 📖 Project Overview
 
-This project presents a complete **Data Analytics workflow** for evaluating digital advertising performance across multiple marketing platforms.
+In this project, I developed a complete **data analytics workflow** to evaluate digital advertising performance across multiple marketing platforms.
 
-Starting from raw campaign data, the project demonstrates the complete analytics lifecycle:
+Starting with raw campaign data, I completed the following stages of the analytics process:
 
 * Data Understanding
 * Data Quality Assessment
@@ -24,7 +24,7 @@ Starting from raw campaign data, the project demonstrates the complete analytics
 * SQL Business Analysis
 * Interactive Power BI Dashboard
 
-The objective is not only to analyze historical performance but also to generate **actionable business insights** that support strategic marketing decisions.
+My objective was to go beyond reporting historical performance by identifying **actionable business insights** that can support campaign optimization, budget allocation, and strategic marketing decisions.
 
 ---
 
